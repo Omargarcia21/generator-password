@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Generador de contrasñeas</title>
+</head>
+<body>
+    <!--Contenedor Padre-->
+    <div class="container">
+        <p>Generador de Contraseñas</p>
+        <!--Contenedor de pantalla para mostrar la contraseña-->
+        <div class="wrapper">
+            <!--Contenedor del input mostrando la contraseña-->
+            <div class="input-box">
+                <input type="text" id="password" disabled>
+                <span id="copy" onclick="copyPassword()">Copiar</span>
+            </div>
+            <!--Contenedor de las opciones para hacer la contraseña -->
+            <div class="pass-settings">
+                <label class="title">Opciones de contraseña</label>
+                <!--Lista de opciones-->
+                <ul class="options">
+                    <!-- contenedor de lista de opciones--> 
+                    <li class="option">
+                        <input checked id="lowercase" type="checkbox">
+                        <label for="lowercase">Minisuculas (a-z)</label>
+                    </li>
+                    <li class="option">
+                        <input checked id="uppercase" type="checkbox">
+                        <label for="uppercase">Mayúsculas (A-Z) </label>
+                    </li>
+                    <li class="option">
+                        <input checked id="numbers" type="checkbox">
+                        <label for="numbers">Números (0-9) </label>
+                    </li>
+                    <li class="option">
+                        <input checked id="symbols" type="checkbox">
+                        <label for="symbols">Simbolos (!-$^+)</label>
+                    </li>
+                    <li class="option">
+                        <input checked id="exc-duplicate" type="checkbox">
+                        <label for="exc-duplicate">Exclude Duplicate</label>
+                    </li>
+                    <li class="option">
+                        <input checked id="spaces" type="checkbox">
+                        <label for="spaces">Espacios Incluidos</label>
+                    </li>
+                </ul>
+            </div>
+            <button class="generate-btn" id="generate" onclick="generatePassword()">Generar Contraseña</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
